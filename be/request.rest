@@ -1,0 +1,26 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "email@gmail.com",
+    "password": "test",
+    "confPassword": "test"
+}
+###
+GET  http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2NDgyNjk0ODQsImV4cCI6MTY0ODI2OTQ5OX0.7fc7ntlpGXEtMoJkB8fMaLrO4zC_3x5JNbQkHzDbEnc
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "email@gmail.com",
+    "password": "test"
+}
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/token
